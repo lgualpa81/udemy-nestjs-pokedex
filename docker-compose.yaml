@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: mongo:5.0.13-focal
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    environment:
+      - MONGODB_DATABASE=nest-pokemon
+    volumes:
+      - $HOME/docker/volumes:/data/db
